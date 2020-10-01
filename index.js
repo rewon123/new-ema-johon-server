@@ -9,7 +9,6 @@ app.use(cors());
 
 const MongoClient = require('mongodb').MongoClient;
 require('dotenv').config()
-const port = 5000;
 
 
 app.get('/', (req, res) => {
@@ -74,4 +73,4 @@ client.connect(err => {
 
 });
 
-app.listen(process.env.PORT || port)
+app.listen(process.env.PORT)
