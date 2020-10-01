@@ -42,6 +42,10 @@ client.connect(err => {
                 res.send(documnets)
             })
     })
+    app.get('/', (req, res) => {
+                res.send('hello i am working fine')
+          
+    })
     app.get('/product/:key', (req, res) => {
         productsCollection.find({ key: req.params.key })
             .toArray((err, documnets) => {
